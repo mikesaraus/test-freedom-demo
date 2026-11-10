@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0E1519" />
+    <!-- Private mockup: keep it out of search engines. -->
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Launchpad · Freedom Portal (mockup)</title>
+    <link rel="icon" type="image/svg+xml" href="./brand/mark.svg" />
+    <script>
+      // Apply the saved theme before first paint so there is no flash.
+      try {
+        var q = new URLSearchParams(location.search).get("theme");
+        if (q === "light" || q === "dark") localStorage.setItem("lp-theme", q);
+        var t = localStorage.getItem("lp-theme");
+        if (!t) t = matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.dataset.theme = t;
+      } catch (e) {}
+    </script>
+    <script type="module" crossorigin src="./assets/index-DgbEiVXM.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/ui-Vq7mSwhV.js">
+    <link rel="modulepreload" crossorigin href="./assets/hooks-xXsSFbl9.js">
+    <link rel="modulepreload" crossorigin href="./assets/megaphone-CInF1HP6.js">
+    <link rel="stylesheet" crossorigin href="./assets/index-ButjQQCh.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
